@@ -19,8 +19,9 @@ namespace NewEventPlanner.Models
         public string City { get; set; }
         public string State { get; set; }
         [DisplayName("Zip Code")]
-
+      
         public string ZipCode { get; set; }
+        public string Phone { get; set; }
         public int Capacity { get; set; }
         public double Price { get; set; }
         public string ApplicationUserId { get; internal set; }

@@ -2,6 +2,7 @@
 using NewEventPlanner.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -53,42 +54,58 @@ namespace NewEventPlanner.Controllers
 
         // POST: Main/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult CreateBusiness([Bind(Include = " Id,VenueName,Address,City,State,ZipCode,Phone,Capacity,Price")] Business business)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                var userId = User.Identity.GetUserId();
+                business.ApplicationUserId = userId;
+
+                db.Business.Add(business);
+                db.SaveChanges();
+                return RedirectToAction("BusinessDetails", new { id = business.Id });
             }
-            catch
-            {
-                return View();
-            }
+
+
+            return View(business);
         }
 
         // GET: Main/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult EditBusiness(int? Id)
         {
-            return View();
-        }
 
+            Business business = db.Business.Find(Id);
+
+            return View(business);
+        }
         // POST: Main/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult EditBusiness([Bind(Include = " Id,VenueName,Address,City,State,ZipCode,Phone,Capacity,Price")] Business business,int Id)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
 
-                return RedirectToAction("Index");
+                Business updatedBusiness = db.Business.Find(Id);
+                if (updatedBusiness == null)
+                {
+                    return RedirectToAction("DisplayError", "Business");
+                }
+                updatedBusiness.VenueName = business.VenueName;
+                updatedBusiness.Address = business.Address;
+                updatedBusiness.City = business.City;
+                updatedBusiness.State = business.State;
+                updatedBusiness.ZipCode = business.ZipCode;
+                updatedBusiness.Phone = business.Phone;
+                updatedBusiness.Capacity = business.Capacity;
+                updatedBusiness.Price = business.Price;
+
+                db.Entry(updatedBusiness).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("BusinessDetails");
             }
-            catch
-            {
-                return View();
-            }
+            return View(business);
         }
-
         // GET: Main/Delete/5
         public ActionResult Delete(int id)
         {
