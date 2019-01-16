@@ -307,6 +307,7 @@
     <Content Include="Views\User\CaterersIndex.cshtml" />
     <Content Include="Views\User\CaterersDetails.cshtml" />
     <Content Include="Views\User\CheckList.cshtml" />
+    <Content Include="Views\Business\CaterersDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,6 +3,16 @@
 @{
     ViewBag.Title = "CaterersIndex";
 }
+<style>
+    body {
+        background-position: center;
+        height: 750px;
+        background-image: url('../../Images/1.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        padding: 150px;
+    }
+</style>
 
 <h2>CaterersIndex</h2>
 
@@ -40,48 +50,49 @@
         <th>
             @Html.DisplayNameFor(model => model.Discription)
         </th>
-       
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
+    @foreach (var item in Model)
+    {
+        <tr>
 
 
-        <td>
-            @Html.DisplayFor(modelItem => item.CaterersName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Item1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Item2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Item3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Item4)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Customize)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Discription)
-        </td>
-        
-        <td>
-         
-            @Html.ActionLink("Details", "CaterersDetails", new { id = item.Id }) |
-           
-        </td>
-    </tr>
-}
+            <td>
+                @Html.DisplayFor(modelItem => item.CaterersName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discription)
+            </td>
+
+            <td>
+
+                @Html.ActionLink("Details", "CaterersDetails", new { id = item.Id }) |
+
+            </td>
+        </tr>
+    }
 
 </table>

@@ -3,18 +3,8 @@
 @{
     ViewBag.Title = "CaterersDetails";
 }
-<style>
-    body {
-        background-position: center;
-        height: 750px;
-        background-image: url('../../Images/1.jpg');
-        background-position: center;
-        background-repeat: no-repeat, repeat;
-        padding: 150px;
-    }
-</style>
 
-<h2>Caterers Details</h2>
+<h2>CaterersDetails</h2>
 
 <div>
     <h4>Business</h4>
@@ -70,6 +60,13 @@
         <dd>
             @Html.DisplayFor(model => model.Item4)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Customize)
@@ -77,13 +74,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Customize)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
         </dd>
 
         <dt>
@@ -94,17 +84,11 @@
             @Html.DisplayFor(model => model.Discription)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUserId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUserId)
-        </dd>
+       
 
     </dl>
 </div>
 <p>
-
-    @Html.ActionLink("Back to List", "CaterersIndex")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

@@ -140,7 +140,7 @@ namespace NewEventPlanner.Controllers
 
         // POST: Main/Create
         [HttpPost]
-        public ActionResult CreateCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price")] Business business)
+        public ActionResult CreateCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Discription")] Business business)
         {
             if (ModelState.IsValid)
             {
@@ -150,7 +150,7 @@ namespace NewEventPlanner.Controllers
 
                 db.Business.Add(business);
                 db.SaveChanges();
-                return RedirectToAction("CaterorsDetails", new { id = business.Id });
+                return RedirectToAction("CaterersDetails", new { id = business.Id });
             }
 
 
@@ -165,7 +165,7 @@ namespace NewEventPlanner.Controllers
         }
         // POST: Main/Edit/5
         [HttpPost]
-        public ActionResult EditCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price")] Business business, int Id)
+        public ActionResult EditCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Discription")] Business business, int Id)
         {
             if (ModelState.IsValid)
             {
@@ -186,7 +186,7 @@ namespace NewEventPlanner.Controllers
 
                 db.Entry(updatedBusiness).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("BusinessDetails");
+                return RedirectToAction("CaterersDetails");
             }
             return View(business);
         }
