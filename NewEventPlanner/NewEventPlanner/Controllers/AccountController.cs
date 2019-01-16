@@ -62,7 +62,6 @@ namespace NewEventPlanner.Controllers
         }
 
         //
-        // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -79,7 +78,20 @@ namespace NewEventPlanner.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    if (User.IsInRole("User"))
+                    {
+                        //probably should redirect only that specific user, put it may happen autimatically
+                        return RedirectToAction("Index", "Home");
+                    }
+                    if (User.IsInRole("Business"))
+                    {
+                        return RedirectToAction("SelectBusiness", "Business");
+                    }
+                    else
+
+                    {
+                        return RedirectToLocal(returnUrl);
+                    }
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -90,7 +102,6 @@ namespace NewEventPlanner.Controllers
                     return View(model);
             }
         }
-
         //
         // GET: /Account/VerifyCode
         [AllowAnonymous]

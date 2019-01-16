@@ -282,11 +282,15 @@
     <Content Include="Views\Business\BusinessDetails.cshtml" />
     <Content Include="Views\Business\CreateBusiness.cshtml" />
     <Content Include="Views\Business\EditBusiness.cshtml" />
+    <Content Include="Views\User\VenueIndex.cshtml" />
+    <Content Include="Views\Business\SelectBusiness.cshtml" />
+    <Content Include="Views\User\SearchZipcode.cshtml" />
+    <Content Include="Views\User\BusinessDetails.cshtml" />
+    <Content Include="Views\User\Stripe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Main\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

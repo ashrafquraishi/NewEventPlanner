@@ -17,11 +17,12 @@ namespace NewEventPlanner.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
-        [DisplayName("Zip Code")]
-        public int ZipCode { get; set; }
+       
         public string City { get; set; }
         public string State { get; set; }
+        [DisplayName("Zip Code")]
 
+        public int ZipCode { get; set; }
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }

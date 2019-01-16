@@ -127,7 +127,11 @@ namespace NewEventPlanner.Controllers
                 return View();
             }
         }
+        public ActionResult SelectBusiness()
+        {
 
+            return View();
+        }
 
 
     }
