@@ -210,6 +210,18 @@
     <Compile Include="Migrations\201901152324163_added a property.Designer.cs">
       <DependentUpon>201901152324163_added a property.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901160756178_added properties for caterers.cs" />
+    <Compile Include="Migrations\201901160756178_added properties for caterers.Designer.cs">
+      <DependentUpon>201901160756178_added properties for caterers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901161908574_added properties for caterers2.cs" />
+    <Compile Include="Migrations\201901161908574_added properties for caterers2.Designer.cs">
+      <DependentUpon>201901161908574_added properties for caterers2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901162202205_update needed.cs" />
+    <Compile Include="Migrations\201901162202205_update needed.Designer.cs">
+      <DependentUpon>201901162202205_update needed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -228,6 +240,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\bg.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -292,6 +306,7 @@
     <Content Include="Views\Business\CaterersIndex.cshtml" />
     <Content Include="Views\User\CaterersIndex.cshtml" />
     <Content Include="Views\User\CaterersDetails.cshtml" />
+    <Content Include="Views\User\CheckList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -316,6 +331,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901152324163_added a property.resx">
       <DependentUpon>201901152324163_added a property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901160756178_added properties for caterers.resx">
+      <DependentUpon>201901160756178_added properties for caterers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901161908574_added properties for caterers2.resx">
+      <DependentUpon>201901161908574_added properties for caterers2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901162202205_update needed.resx">
+      <DependentUpon>201901162202205_update needed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

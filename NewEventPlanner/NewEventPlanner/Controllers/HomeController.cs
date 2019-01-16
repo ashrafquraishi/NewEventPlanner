@@ -49,7 +49,7 @@ namespace NewEventPlanner.Controllers
                 body += "<hr>";
                 body += "<p>{2}</p>";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress("isetrade@gmail.com")); //destination e-mail address
+                message.To.Add(new MailAddress("ashraf.quraishi.4@gmail.com")); //destination e-mail address
                 message.Subject = "Your email subject";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;

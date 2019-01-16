@@ -24,7 +24,8 @@
                     @if (User.IsInRole("User"))
                     {
                         <li>@Html.ActionLink("Search for Venue", "SearchZipcode", "User")</li>
-                       
+                        <li>@Html.ActionLink("Search for Caterers", "CaterersIndex", "User")</li>
+                        
 
 
                     }
@@ -33,9 +34,9 @@
 
 
                         <li>@Html.ActionLink("Publish Your venue", "CreateBusiness", "Business")</li>
-                       
+
                     }
-                    </ul>
+                </ul>
                     @Html.Partial("_LoginPartial")
 </div>
         </div>
@@ -53,3 +54,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+

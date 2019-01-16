@@ -11,3 +11,66 @@
         font-size: 2em;
     }
 </style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paradox event planner</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body>
+    <style>
+        body {
+            background-position: center;
+            height: 750px;
+            
+            background-image: url('../../Images/1.jpg');
+            background-position: center;
+            background-repeat: no-repeat, repeat;
+            padding: 150px;
+        }
+    </style>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("User"))
+        {
+            <h1>You are now logged in.</h1>
+            <h2>Choose from several options below:</h2>
+            <ul>
+                <li><a href="/User/CreateUser">Create your Profile</a></li>
+                <li><a href="/User/SearchZipcode">Search venue according to your Zipcode</a></li>
+                <li><a href="/User/CaterersIndex">Check for caterers</a></li>
+                <li><a href="/Customer/CreateSuspendAccount">Suspend You're Pickup's</a></li>
+                <li><a href="/Customer/MakePayment">Pay For You're service</a></li>
+                <li><a href="/Customer/CheckBalance">Check You're Balance</a></li>
+            </ul>
+        }
+
+        if (User.IsInRole("Business"))
+        {
+            <h1>Hello.</h1>
+            <h2>Choose from several options below:</h2>
+            <ul>
+
+                <li><a href="/Business/CreateCateringBusiness">Publish your catering business</a></li>
+                <li><a href="/Business/CreateBusiness">Publish your venue</a></li>
+            </ul>
+        }
+    }
+    else
+    {
+        //No user is logged in
+        <h2>Please login.</h2>
+        <h3>How To - Instructions</h3>
+        <ol>
+            <li>Customer must login</li>
+            <li>Customer can browse and Venues according to zipcode</li>
+            <li>Customer can browse and book caterers</li>
+
+        </ol>
+        <p><strong>Note:</strong> All business owners can register and publish their business.</p>
+    }
+</body>
+</html>

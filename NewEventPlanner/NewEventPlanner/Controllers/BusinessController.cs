@@ -134,7 +134,7 @@ namespace NewEventPlanner.Controllers
         }
         public ActionResult CreateCateringBusiness()
         {
-            ViewBag.Id = new SelectList(db.Users, "Id", "Name");
+            ViewBag.Id = new SelectList(db.User, "Id", "Name");
             return View();
         }
 
