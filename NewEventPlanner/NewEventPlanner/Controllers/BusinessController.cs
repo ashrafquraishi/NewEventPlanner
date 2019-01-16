@@ -46,7 +46,7 @@ namespace NewEventPlanner.Controllers
         }
 
         // GET: Main/Create
-        public ActionResult Create()
+        public ActionResult CreateBusiness()
         {
             ViewBag.Id = new SelectList(db.Users, "Id", "Name");
             return View();

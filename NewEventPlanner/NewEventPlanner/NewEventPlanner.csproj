@@ -198,12 +198,17 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\BusinessController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201901152253284_added models.cs" />
     <Compile Include="Migrations\201901152253284_added models.Designer.cs">
       <DependentUpon>201901152253284_added models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901152324163_added a property.cs" />
+    <Compile Include="Migrations\201901152324163_added a property.Designer.cs">
+      <DependentUpon>201901152324163_added a property.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -281,6 +286,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Main\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -298,6 +304,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901152253284_added models.resx">
       <DependentUpon>201901152253284_added models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901152324163_added a property.resx">
+      <DependentUpon>201901152324163_added a property.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
