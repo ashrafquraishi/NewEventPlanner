@@ -132,7 +132,68 @@ namespace NewEventPlanner.Controllers
 
             return View();
         }
+        public ActionResult CreateCateringBusiness()
+        {
+            ViewBag.Id = new SelectList(db.Users, "Id", "Name");
+            return View();
+        }
+
+        // POST: Main/Create
+        [HttpPost]
+        public ActionResult CreateCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price")] Business business)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var userId = User.Identity.GetUserId();
+                business.ApplicationUserId = userId;
+
+                db.Business.Add(business);
+                db.SaveChanges();
+                return RedirectToAction("CaterorsDetails", new { id = business.Id });
+            }
 
 
+            return View(business);
+        }
+        public ActionResult EditCateringBusiness(int? Id)
+        {
+
+            Business business = db.Business.Find(Id);
+
+            return View(business);
+        }
+        // POST: Main/Edit/5
+        [HttpPost]
+        public ActionResult EditCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price")] Business business, int Id)
+        {
+            if (ModelState.IsValid)
+            {
+
+                Business updatedBusiness = db.Business.Find(Id);
+                if (updatedBusiness == null)
+                {
+                    return RedirectToAction("DisplayError", "Business");
+                }
+                updatedBusiness.CaterersName = business.CaterersName;
+                updatedBusiness.Quantity = business.Quantity;
+                updatedBusiness.Item1 = business.Item1;
+                updatedBusiness.Item2 = business.Item2;
+                updatedBusiness.Item3 = business.Item3;
+                updatedBusiness.Item4 = business.Item4;
+                updatedBusiness.Customize = business.Customize;
+                updatedBusiness.Price = business.Price;
+
+                db.Entry(updatedBusiness).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("BusinessDetails");
+            }
+            return View(business);
+        }
+        public ActionResult CaterersIndex()
+        {
+
+            return View(db.Business.ToList());
+        }
     }
 }

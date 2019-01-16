@@ -287,6 +287,9 @@
     <Content Include="Views\User\SearchZipcode.cshtml" />
     <Content Include="Views\User\BusinessDetails.cshtml" />
     <Content Include="Views\User\Stripe.cshtml" />
+    <Content Include="Views\Business\EditCateringBusiness.cshtml" />
+    <Content Include="Views\Business\CreateCateringBusiness.cshtml" />
+    <Content Include="Views\Business\CaterersIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

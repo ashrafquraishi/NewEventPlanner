@@ -24,6 +24,16 @@ namespace NewEventPlanner.Models
         public string Phone { get; set; }
         public int Capacity { get; set; }
         public double Price { get; set; }
+        [DisplayName("Venue Name")]
+        public string CaterersName { get; set; }
+        public int Quantity { get; set; }
+
+        public string Item1 { get; set; }
+        public string Item2 { get; set; }
+        public string Item3 { get; set; }
+        public string Item4 { get; set; }
+        public string Customize { get; set; }
+        public string Discription { get; set; }
         public string ApplicationUserId { get; internal set; }
     }
 }
