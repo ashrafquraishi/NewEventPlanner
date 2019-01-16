@@ -140,8 +140,37 @@ namespace NewEventPlanner.Controllers
         }
 
 
+        public ActionResult CaterersIndex()
+        {
 
+            return View(db.Business.ToList());
+        }
 
+        public ActionResult CaterersDetails(int? id)
+        {
+            Business business = null;
+            if (id == null)
+            {
+                // return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+                var FoundUserId = User.Identity.GetUserId();
+
+                business = db.Business.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
+                return View(business);
+
+            }
+
+            else
+            {
+                business = db.Business.Find(id);
+            }
+
+            if (business == null)
+            {
+                return HttpNotFound();
+            }
+            return View(business);
+        }
 
 
 

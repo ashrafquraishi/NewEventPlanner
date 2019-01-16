@@ -1,0 +1,100 @@
+﻿@model NewEventPlanner.Models.Business
+
+@{
+    ViewBag.Title = "CaterersDetails";
+}
+
+<h2>Caterers Details</h2>
+
+<div>
+    <h4>Business</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaterersName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaterersName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customize)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+   
+    @Html.ActionLink("Back to List", "CaterersIndex")
+</p>

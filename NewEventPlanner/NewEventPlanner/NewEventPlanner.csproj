@@ -290,6 +290,8 @@
     <Content Include="Views\Business\EditCateringBusiness.cshtml" />
     <Content Include="Views\Business\CreateCateringBusiness.cshtml" />
     <Content Include="Views\Business\CaterersIndex.cshtml" />
+    <Content Include="Views\User\CaterersIndex.cshtml" />
+    <Content Include="Views\User\CaterersDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
