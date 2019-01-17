@@ -227,6 +227,10 @@ namespace NewEventPlanner.Controllers
             }
             return View(business);
         }
+        public ActionResult Chat()
+        {
+            return View();
+        }
         public ActionResult SecurityAgencyIndex()
         {
 

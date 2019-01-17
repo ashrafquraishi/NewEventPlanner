@@ -11,6 +11,8 @@ namespace NewEventPlanner
     {
         public void Configuration(IAppBuilder app)
         {
+            app.MapSignalR();
+
             ConfigureAuth(app);
             CreateRolls();
         }
