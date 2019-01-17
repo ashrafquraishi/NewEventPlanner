@@ -202,7 +202,36 @@ namespace NewEventPlanner.Controllers
             return View();
         }
 
+        public ActionResult DetailsOfSecurityAgency(int? id)
+        {
+            Business business = null;
+            if (id == null)
+            {
+                // return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
+                var FoundUserId = User.Identity.GetUserId();
+
+                business = db.Business.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
+                return View(business);
+
+            }
+
+            else
+            {
+                business = db.Business.Find(id);
+            }
+
+            if (business == null)
+            {
+                return HttpNotFound();
+            }
+            return View(business);
+        }
+        public ActionResult SecurityAgencyIndex()
+        {
+
+            return View(db.Business.ToList());
+        }
 
 
 

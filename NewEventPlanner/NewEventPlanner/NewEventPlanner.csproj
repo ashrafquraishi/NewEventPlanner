@@ -312,6 +312,9 @@
     <Content Include="Views\User\Stripe.cshtml" />
     <Content Include="Views\Business\CreateSecurityAgency.cshtml" />
     <Content Include="Views\Business\DetailsOfSecurityAgency.cshtml" />
+    <Content Include="Views\User\DetailsOfSecurityAgency.cshtml" />
+    <Content Include="Views\Business\SecurityAgencyIndex.cshtml" />
+    <Content Include="Views\User\SecurityAgencyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
