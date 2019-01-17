@@ -14,12 +14,12 @@ namespace NewEventPlanner.Migrations
             AddColumn("dbo.Businesses", "Item3", c => c.String());
             AddColumn("dbo.Businesses", "Item4", c => c.String());
             AddColumn("dbo.Businesses", "Customize", c => c.String());
-            AddColumn("dbo.Businesses", "Discription", c => c.String());
+            AddColumn("dbo.Businesses", "Description", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Businesses", "Discription");
+            DropColumn("dbo.Businesses", "Description");
             DropColumn("dbo.Businesses", "Customize");
             DropColumn("dbo.Businesses", "Item4");
             DropColumn("dbo.Businesses", "Item3");

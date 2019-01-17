@@ -309,6 +309,9 @@
     <Content Include="Views\Business\CaterersDetails.cshtml" />
     <Content Include="Views\Home\Stripe.cshtml" />
     <Content Include="Views\User\CreateUser.cshtml" />
+    <Content Include="Views\User\Stripe.cshtml" />
+    <Content Include="Views\Business\CreateSecurityAgency.cshtml" />
+    <Content Include="Views\Business\DetailsOfSecurityAgency.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

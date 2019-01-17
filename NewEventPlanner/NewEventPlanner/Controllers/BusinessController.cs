@@ -140,7 +140,7 @@ namespace NewEventPlanner.Controllers
 
         // POST: Main/Create
         [HttpPost]
-        public ActionResult CreateCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Discription")] Business business)
+        public ActionResult CreateCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Description")] Business business)
         {
             if (ModelState.IsValid)
             {
@@ -165,7 +165,7 @@ namespace NewEventPlanner.Controllers
         }
         // POST: Main/Edit/5
         [HttpPost]
-        public ActionResult EditCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Discription")] Business business, int Id)
+        public ActionResult EditCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Description")] Business business, int Id)
         {
             if (ModelState.IsValid)
             {
@@ -220,6 +220,60 @@ namespace NewEventPlanner.Controllers
                 return HttpNotFound();
             }
             return View(business);
+        }
+        public ActionResult CreateSecurityAgency()
+        {
+            ViewBag.Id = new SelectList(db.User, "Id", "Name");
+            return View();
+        }
+
+        // POST: Main/Create
+        [HttpPost]
+        public ActionResult CreateSecurityAgency([Bind(Include = " Id,SecurityAgencyName,NumberOfPeople,Charge")] Business business)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var userId = User.Identity.GetUserId();
+                business.ApplicationUserId = userId;
+
+                db.Business.Add(business);
+                db.SaveChanges();
+                return RedirectToAction("DetailsOfSecurityAgency", new { id = business.Id });
+            }
+
+
+            return View(business);
+        }
+        public ActionResult DetailsOfSecurityAgency(int? id)
+        {
+            Business business = null;
+            if (id == null)
+            {
+                // return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+                var FoundUserId = User.Identity.GetUserId();
+
+                business = db.Business.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
+                return View(business);
+
+            }
+
+            else
+            {
+                business = db.Business.Find(id);
+            }
+
+            if (business == null)
+            {
+                return HttpNotFound();
+            }
+            return View(business);
+        }
+        public ActionResult SecurityAgencyIndex()
+        {
+
+            return View(db.Business.ToList());
         }
 
     }

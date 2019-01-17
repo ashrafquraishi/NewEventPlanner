@@ -1,0 +1,52 @@
+﻿@model NewEventPlanner.Models.Business
+
+@{
+    ViewBag.Title = "DetailsOfSecurityAgency";
+}
+
+<h2>Details Of Security Agency</h2>
+
+<div>
+    <h4>Business</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityAgencyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityAgencyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfPeople)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfPeople)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Charge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

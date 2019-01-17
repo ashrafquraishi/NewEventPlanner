@@ -33,7 +33,16 @@ namespace NewEventPlanner.Models
         public string Item3 { get; set; }
         public string Item4 { get; set; }
         public string Customize { get; set; }
-        public string Discription { get; set; }
+        public string Description { get; set; }
+        [DisplayName("Price for these dishes")]
+        public double MenuPrice { get; set; }
+  
+        /// security
+     
+        public string SecurityAgencyName { get; set; }
+        [DisplayName("Number of personnal you have")]
+        public int NumberOfPeople { get; set; }
+        public double Charge { get; set; }
         public string ApplicationUserId { get; internal set; }
     }
 }

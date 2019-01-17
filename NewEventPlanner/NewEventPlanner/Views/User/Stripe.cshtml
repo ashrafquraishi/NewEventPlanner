@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Stripe";
+}
+
+
+
+<style>
+    body {
+        background-position: center;
+        height: 750px;
+        background-image: url('../../Images/1.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        padding: 150px;
+    }
+</style>
+
+
+
+<form action="your-server-side-code" method="POST">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+            data-amount="@ViewBag.Fee"
+            data-name="Stripe.com"
+            data-description="charge"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"
+            data-zip-code="false">
+    </script>
+</form>

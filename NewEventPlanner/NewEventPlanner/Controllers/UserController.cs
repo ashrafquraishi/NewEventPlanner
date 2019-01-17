@@ -2,6 +2,7 @@
 using NewEventPlanner.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -22,11 +23,32 @@ namespace NewEventPlanner.Controllers
         }
 
         // GET: User/Details/5
-        public ActionResult Details(int id)
+       
+        public ActionResult UserDetails(int? id)
         {
-            return View();
-        }
+            User user = null;
+            if (id == null)
+            {
+                // return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
+                var FoundUserId = User.Identity.GetUserId();
+
+                user = db.User.Where(c => c.ApplicationUserId == FoundUserId).FirstOrDefault();
+                return View(user);
+
+            }
+
+            else
+            {
+                user = db.User.Find(id);
+            }
+
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
         // GET: User/Create
         public ActionResult CreateUser()
         {
@@ -173,7 +195,12 @@ namespace NewEventPlanner.Controllers
             return View(business);
         }
 
-
+        public ActionResult Stripe()
+        {
+            var stripePublishKey = ConfigurationManager.AppSettings["stripePublishableKey"];
+            ViewBag.StripePublishKey = stripePublishKey;
+            return View();
+        }
 
 
 
