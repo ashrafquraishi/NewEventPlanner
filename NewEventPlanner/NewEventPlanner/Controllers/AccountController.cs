@@ -164,7 +164,7 @@ namespace NewEventPlanner.Controllers
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRole);
                     if (model.UserRole == "User")
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("CreateUser", "User");
                     }
                     else if (model.UserRole == "Business")
                     {

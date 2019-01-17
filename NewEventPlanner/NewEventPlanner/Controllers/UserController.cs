@@ -35,7 +35,7 @@ namespace NewEventPlanner.Controllers
 
         // POST: User/Create
         [HttpPost]
-        public ActionResult Create([Bind(Include = " Id,FirstName,LastName,Email,Address,City,State,ZipCode")] User user)
+        public ActionResult CreateUser([Bind(Include = " Id,FirstName,LastName,Email,Address,City,State,ZipCode")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -138,10 +138,7 @@ namespace NewEventPlanner.Controllers
             }
             return View(business);
         }
-        public ActionResult Stripe ( )
-        {
-            return View();
-        }
+       
 
 
         public ActionResult CaterersIndex()
