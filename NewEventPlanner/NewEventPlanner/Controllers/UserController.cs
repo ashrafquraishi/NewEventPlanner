@@ -238,9 +238,7 @@ namespace NewEventPlanner.Controllers
         }
 
 
-
-
-
+       
 
 
 

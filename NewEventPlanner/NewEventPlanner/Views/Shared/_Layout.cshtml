@@ -25,13 +25,15 @@
                     {
                         <li>@Html.ActionLink("Search for Venue", "SearchZipcode", "User")</li>
                         <li>@Html.ActionLink("Search for Caterers", "CaterersIndex", "User")</li>
-                        
+                        <li>@Html.ActionLink("Checklist", "CheckList", "User")</li>
+                        <li>@Html.ActionLink("Chat", "Chat", "User")</li>
 
 
                     }
                     @if (User.IsInRole("Business"))
                     {
 
+                        <li>@Html.ActionLink("Chat", "Chat", "User")</li>
 
                         <li>@Html.ActionLink("Publish Your venue", "CreateBusiness", "Business")</li>
 
@@ -44,9 +46,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Paradox</p>
-        </footer>
+       
     </div>
 
     @Scripts.Render("~/bundles/jquery")

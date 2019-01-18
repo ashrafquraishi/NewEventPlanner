@@ -106,6 +106,10 @@ namespace NewEventPlanner.Controllers
             }
             return View(business);
         }
+        public ActionResult UploadImage()
+        {
+            return View();
+        }
         // GET: Main/Delete/5
         public ActionResult Delete(int id)
         {
@@ -140,7 +144,7 @@ namespace NewEventPlanner.Controllers
 
         // POST: Main/Create
         [HttpPost]
-        public ActionResult CreateCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Description")] Business business)
+        public ActionResult CreateCateringBusiness([Bind(Include = " Id,CaterersName,Item1,Item2,Item3,Item4,Customize,MenuPrice,Description")] Business business)
         {
             if (ModelState.IsValid)
             {
@@ -165,7 +169,7 @@ namespace NewEventPlanner.Controllers
         }
         // POST: Main/Edit/5
         [HttpPost]
-        public ActionResult EditCateringBusiness([Bind(Include = " Id,CaterersName,Quantity,Item1,Item2,Item3,Item4,Customize,Price,Description")] Business business, int Id)
+        public ActionResult EditCateringBusiness([Bind(Include = " Id,CaterersName,Item1,Item2,Item3,Item4,Customize,MenuPrice,Description")] Business business, int Id)
         {
             if (ModelState.IsValid)
             {
@@ -176,7 +180,7 @@ namespace NewEventPlanner.Controllers
                     return RedirectToAction("DisplayError", "Business");
                 }
                 updatedBusiness.CaterersName = business.CaterersName;
-                updatedBusiness.Quantity = business.Quantity;
+              
                 updatedBusiness.Item1 = business.Item1;
                 updatedBusiness.Item2 = business.Item2;
                 updatedBusiness.Item3 = business.Item3;

@@ -4,7 +4,7 @@
     ViewBag.Title = "DetailsOfSecurityAgency";
 }
 
-<h2>Details Of Security Agency</h2>
+
 <style>
     body {
         background-position: center;
@@ -16,7 +16,7 @@
     }
 </style>
 <div>
-    <h4>Business</h4>
+    
     <hr />
     <dl class="dl-horizontal">
 
@@ -45,17 +45,7 @@
             @Html.DisplayFor(model => model.Charge)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ApplicationUserId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ApplicationUserId)
-        </dd>
+       
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -37,9 +37,9 @@ namespace NewEventPlanner.Controllers
             ViewBag.StripePublishKey = stripePublishKey;
             return View();
         }
-         [HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Contact(EmailFormModel model)
+        public async Task<ActionResult> Email(EmailFormModel model)
         {
             if (ModelState.IsValid)
             {
@@ -49,8 +49,8 @@ namespace NewEventPlanner.Controllers
                 body += "<hr>";
                 body += "<p>{2}</p>";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress("ashraf.quraishi.4@gmail.com")); //destination e-mail address
-                message.Subject = "Your email subject";
+                message.To.Add(new MailAddress("quraishiiff@gmail.com")); //Send to this e-mail address
+                message.Subject = "Feedback";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;
                 using (var smtp = new SmtpClient())
@@ -58,12 +58,13 @@ namespace NewEventPlanner.Controllers
                     try
                     {
                         await smtp.SendMailAsync(message);
+                        return RedirectToAction("Sent");//Goto sent successful page.
                     }
                     catch (Exception e)
                     {
                         Response.Write("<p>" + e.Message + "</p>");
                     }
-                    return RedirectToAction("Sent");
+                    return View();//Send back to form if unsuccessful
                 }
             }
             return View(model);
@@ -72,13 +73,6 @@ namespace NewEventPlanner.Controllers
         public ActionResult Sent()
         {
             return View();
-        }
-
-        public class EmailFormModel
-        {
-            public object FromName { get; internal set; }
-            public object FromEmail { get; internal set; }
-            public object Message { get; internal set; }
         }
     }
 

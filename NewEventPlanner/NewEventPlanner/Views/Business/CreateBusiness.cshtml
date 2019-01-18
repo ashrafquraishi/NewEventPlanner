@@ -4,7 +4,7 @@
     ViewBag.Title = "CreateBusiness";
 }
 
-<h2>CreateBusiness</h2>
+<h2>Publish your venue</h2>
 <style>
     body {
         background-position: center;
@@ -103,9 +103,10 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div>
+        @Html.ActionLink("Back to List", "Index") | |
+        @Html.ActionLink("Upload a picture", "UploadFile", "Upload")
+    </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
