@@ -21,9 +21,10 @@ namespace NewEventPlanner.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        
         // GET: User/Details/5
-       
+
         public ActionResult UserDetails(int? id)
         {
             User user = null;
@@ -67,7 +68,7 @@ namespace NewEventPlanner.Controllers
 
                 db.User.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index","Home", new { id = user.Id });
+                return RedirectToAction("UserDetails", "User", new { id = user.Id });
             }
 
 
@@ -238,7 +239,22 @@ namespace NewEventPlanner.Controllers
         }
 
 
-       
+        public ActionResult CreateChecklist([Bind(Include = " Id,FirstName,LastName,Email,Address,City,State,ZipCode")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var userId = User.Identity.GetUserId();
+                user.ApplicationUserId = userId;
+
+                db.User.Add(user);
+                db.SaveChanges();
+                return RedirectToAction("UserDetails", "User", new { id = user.Id });
+            }
+
+
+            return View(user);
+        }
 
 
 

@@ -4,8 +4,17 @@
     ViewBag.Title = "CaterersDetails";
 }
 
-<h2>CaterersDetails</h2>
-
+<h2>Caterers Details</h2>
+<style>
+    body {
+        background-position: center;
+        height: 750px;
+        background-image: url('../../Images/1.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        padding: 150px;
+    }
+</style>
 <div>
     <h4>Business</h4>
     <hr />
@@ -21,13 +30,7 @@
             @Html.DisplayFor(model => model.CaterersName)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
+     
 
         <dt>
             @Html.DisplayNameFor(model => model.Item1)
