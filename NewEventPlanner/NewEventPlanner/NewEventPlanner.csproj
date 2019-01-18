@@ -349,6 +349,7 @@
     <Content Include="Views\Upload\UploadFile.cshtml" />
     <Content Include="Views\Business\UploadImage.cshtml" />
     <Content Include="Views\Email\Email.cshtml" />
+    <Content Include="Views\Email\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -8,9 +8,9 @@ namespace NewEventPlanner.Models
 {
     public class EmailFormModel
     {
-        [Required, Display(Name = "Your name")]
+        [Required, Display(Name = "recipient name")]
         public string FromName { get; set; }
-        [Required, Display(Name = "Your email"), EmailAddress]
+        [Required, Display(Name = "recipient email"), EmailAddress]
         public string FromEmail { get; set; }
         [Required]
         public string Message { get; set; }

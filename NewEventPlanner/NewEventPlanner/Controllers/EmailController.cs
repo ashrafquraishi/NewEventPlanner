@@ -35,7 +35,7 @@ namespace NewEventPlanner.Controllers
                 body += "<p>{2}</p>";
                 var message = new MailMessage();
                 message.To.Add(new MailAddress("quraishiiff@gmail.com")); //Send to this e-mail address
-                message.Subject = "Feedback";
+                message.Subject = "invition";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;
                 using (var smtp = new SmtpClient())
