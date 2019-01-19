@@ -33,7 +33,7 @@ namespace NewEventPlanner.Controllers
 
             return View();
         }
-        public ActionResult Stripe()
+        public ActionResult StripeForCaterers()
         {
             var stripePublishKey = ConfigurationManager.AppSettings["stripePublishableKey"];
             ViewBag.StripePublishKey = stripePublishKey;

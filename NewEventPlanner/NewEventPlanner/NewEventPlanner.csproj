@@ -342,9 +342,8 @@
     <Content Include="Views\User\SearchZipcode.cshtml" />
     <Content Include="Views\User\BusinessDetails.cshtml" />
     <Content Include="Views\User\CheckList.cshtml" />
-    <Content Include="Views\Home\Stripe.cshtml" />
+    <Content Include="Views\Home\StripeForCaterers.cshtml" />
     <Content Include="Views\User\CreateUser.cshtml" />
-    <Content Include="Views\User\Stripe.cshtml" />
     <Content Include="Views\User\Chat.cshtml" />
     <Content Include="Views\Home\Email.cshtml" />
     <Content Include="Views\Upload\UploadFile.cshtml" />
@@ -353,13 +352,10 @@
     <Content Include="Views\Email\Sent.cshtml" />
     <Content Include="Views\User\UserDetails.cshtml" />
     <Content Include="Views\test\Checkbox.cshtml" />
-    <Content Include="Views\SecurityAgency\SecurityAgencyIndex.cshtml" />
-    <Content Include="Views\SecurityAgency\CreateSecurityAgency.cshtml" />
-    <Content Include="Views\SecurityAgency\EditBusiness.cshtml" />
-    <Content Include="Views\SecurityAgency\SecurityAgencyDetails.cshtml" />
     <Content Include="Views\SecurityAgency\Test.cshtml" />
     <Content Include="Views\Home\Charge.cshtml" />
     <Content Include="Views\SecurityAgency\SecurityAgency.cshtml" />
+    <Content Include="Views\SecurityAgency\StripeForSecurityAgency.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

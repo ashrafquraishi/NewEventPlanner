@@ -1,9 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "Stripe";
+    ViewBag.Title = "StripeForSecurityAgency";
 }
-
-<h2>Stripe</h2>
 
 <style>
     body {
@@ -31,7 +29,7 @@
                         <label for="adr"><i class="fa fa-address-card-o"></i> Address</label><br />
                         <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br />
                         <label for="city"><i class="fa fa-institution"></i> City</label><br />
-                        <input type="text" id="city" name="city" placeholder="Milwaukeek"><br />
+                        <input type="text" id="city" name="city" placeholder="Milwaukee"><br />
 
                         <label for="state"><i class="fa fa-institution"></i> State</label><br />
                         <input type="text" id="state" name="city" placeholder="Wisconsin"><br />
@@ -39,30 +37,30 @@
                         <label for="zipcode"><i class="fa fa-institution"></i> Zipcode</label><br />
                         <input type="text" id="Zipcode" name="city" placeholder="53220"><br />
 
-                        <label for="Delivery Date"><i class="fa fa-institution"></i> Delivery Date</label><br />
-                        <input type="text" id="Delivery Date" name="city" placeholder="01/06/2018"><br />
+                        <label for="Event Date"><i class="fa fa-institution"></i> Event Date</label><br />
+                        <input type="text" id="Event Date" name="city" placeholder="01/06/2018"><br />
 
-                        <label for="Quantity"><i class="fa fa-institution"></i> Quantity</label><br />
-                        <input type="text" id="Quantity" name="city" placeholder="food for 5 people"><br />
-                        
+                       
+
                     </div>
                 </div>
             </form>
-                   
-                </div>
+
+        </div>
 
         <br />
-                    <form name="BillingForm" action="/Home/Charge" method="POST">
-                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-                                data-amount="@ViewBag.Fee"
-                                data-name="Stripe.com"
-                                data-description="charge"
-                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                                data-locale="auto"
-                                data-zip-code="false">
-                        </script>
-                    </form>
-                </div>
-        </div>
+        <form name="BillingForm" action="/Home/Charge" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+                    data-amount="@ViewBag.Fee"
+                    data-name="Stripe.com"
+                    data-description="charge"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto"
+                    data-zip-code="false">
+            </script>
+        </form>
     </div>
+</div>
+   
+

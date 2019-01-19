@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using Microsoft.AspNet.Identity;
+using System.Configuration;
 
 namespace NewEventPlanner.Controllers
 {
@@ -123,6 +124,12 @@ namespace NewEventPlanner.Controllers
         {
 
             return View(db.SecurityAgency.ToList());
+        }
+        public ActionResult StripeForSecurityAgency()
+        {
+            var stripePublishKey = ConfigurationManager.AppSettings["stripePublishableKey"];
+            ViewBag.StripePublishKey = stripePublishKey;
+            return View();
         }
 
 
