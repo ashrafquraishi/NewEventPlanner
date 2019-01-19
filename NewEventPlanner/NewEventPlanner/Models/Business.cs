@@ -24,28 +24,8 @@ namespace NewEventPlanner.Models
         public string Phone { get; set; }
         public int Capacity { get; set; }
         public double Price { get; set; }
-        [DisplayName("Venue Name")]
-        public string CaterersName { get; set; }
-
-        [DisplayName("APPETIZERS")]
-        public string Item1 { get; set; }
-        [DisplayName("MAIN COURSE")]
-        public string Item2 { get; set; }
-        [DisplayName("DESSERTS")]
-        public string Item3 { get; set; }
-        [DisplayName("BEVERAGES AND DRINKS")]
-        public string Item4 { get; set; }
-        public string Customize { get; set; }
-        public string Description { get; set; }
-        [DisplayName("Price for these dishes")]
-        public double MenuPrice { get; set; }
-  
-        /// security
-     
-        public string SecurityAgencyName { get; set; }
-        [DisplayName("Number of personnal you have")]
-        public int NumberOfPeople { get; set; }
-        public double Charge { get; set; }
+       
+       
         [Display(Name = "Picture Upload: ")]
         public string PictureUpload { get; set; }
         public string ApplicationUserId { get; internal set; }

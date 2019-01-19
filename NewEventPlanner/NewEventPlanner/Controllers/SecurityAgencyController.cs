@@ -107,6 +107,11 @@ namespace NewEventPlanner.Controllers
             return View(db.SecurityAgency.ToList());
         }
 
+        public ActionResult SecurityAgency()
+        {
+
+            return View(db.SecurityAgency.ToList());
+        }
 
 
     }

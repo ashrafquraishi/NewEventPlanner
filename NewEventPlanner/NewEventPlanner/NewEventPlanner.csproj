@@ -253,6 +253,10 @@
     <Compile Include="Migrations\201901182231538_updating models.Designer.cs">
       <DependentUpon>201901182231538_updating models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901190046341_removed caterers details.cs" />
+    <Compile Include="Migrations\201901190046341_removed caterers details.Designer.cs">
+      <DependentUpon>201901190046341_removed caterers details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EmailFormModel.cs" />
@@ -344,7 +348,7 @@
     <Content Include="Views\User\CaterersDetails.cshtml" />
     <Content Include="Views\User\CheckList.cshtml" />
     <Content Include="Views\Business\CaterersDetails.cshtml" />
-    <Content Include="Views\Home\Stripe.cshtml" />
+    <Content Include="Views\Home\StripeForCaterers.cshtml" />
     <Content Include="Views\User\CreateUser.cshtml" />
     <Content Include="Views\User\Stripe.cshtml" />
     <Content Include="Views\User\Chat.cshtml" />
@@ -361,6 +365,7 @@
     <Content Include="Views\SecurityAgency\SecurityAgencyDetails.cshtml" />
     <Content Include="Views\SecurityAgency\Test.cshtml" />
     <Content Include="Views\Home\Charge.cshtml" />
+    <Content Include="Views\SecurityAgency\SecurityAgency.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -410,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901182231538_updating models.resx">
       <DependentUpon>201901182231538_updating models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901190046341_removed caterers details.resx">
+      <DependentUpon>201901190046341_removed caterers details.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
