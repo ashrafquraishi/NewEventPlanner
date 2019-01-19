@@ -5,3 +5,182 @@
 
 <h2>Security Agency</h2>
 
+<style>
+    body {
+        background-position: center;
+        height: 750px;
+        background-image: url('../../Images/1.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        padding: 150px;
+    }
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .columns {
+            float: left;
+            width: 33.3%;
+            padding: 8px;
+        }
+
+        .price {
+            list-style-type: none;
+            border: 1px solid #eee;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+            .price:hover {
+                box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+            }
+
+            .price .header {
+                background-color: #111;
+                color: white;
+                font-size: 25px;
+            }
+
+            .price li {
+                border-bottom: 1px solid #eee;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .price .grey {
+                background-color: #eee;
+                font-size: 20px;
+            }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center"> Pricing Tables for Security Agency</h2>
+    @*<p style="text-align:center">Resize the browser window to see the effect.</p>*@
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header">Security Agency</li>
+            <li class="grey">$ 40 / personnel </li>
+            <li>Creamy Tomato Soup  </li>
+            <li>Mix Vegetable Soup  </li>
+            <li>Chicken Soup</li>
+            <li>Tomato Soup </li>
+
+            <li class="grey">
+                @*<a href="#" class="button">Order Now</a></li>*@
+                <a href="/Home/StripeForCaterers">Order Now</a>
+        </ul>
+    </div>
+
+   
+
+</body>
+</html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 0 5px;
+        }
+
+        .row {
+            margin: 0 -5px;
+        }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+
+        /* Style the counter cards */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #444;
+            color: white;
+        }
+
+        .fa {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <p><i class="fa fa-user"></i></p>
+                <h3>11+</h3>
+                <p>Partners</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <p><i class="fa fa-check"></i></p>
+                <h3>55+</h3>
+                <p>Projects</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <p><i class="fa fa-smile-o"></i></p>
+                <h3>100+</h3>
+                <p>Happy Clients</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <p><i class="fa fa-coffee"></i></p>
+                <h3>100+</h3>
+                <p>Meetings</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

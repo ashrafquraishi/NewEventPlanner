@@ -13,6 +13,18 @@ namespace NewEventPlanner.Controllers
     public class SecurityAgencyController : Controller
     {
         public ApplicationDbContext db = new ApplicationDbContext();
+
+        //public int userinput { get; private set; }
+        //{}
+        //public double? ChargesForUser(User user)
+        //{
+        //    userinput = userinput  * 35;
+
+        //    var money = user.u;
+        //    return money;
+        //}
+
+
         public ActionResult SecurityAgencyIndex()
         {
 
