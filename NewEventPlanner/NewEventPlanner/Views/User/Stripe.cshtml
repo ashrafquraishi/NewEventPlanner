@@ -18,7 +18,7 @@
 
 
 
-<form action="your-server-side-code" method="POST">
+<form name="BillingForm" action="/Home/Charge" method="POST">
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
             data-amount="@ViewBag.Fee"

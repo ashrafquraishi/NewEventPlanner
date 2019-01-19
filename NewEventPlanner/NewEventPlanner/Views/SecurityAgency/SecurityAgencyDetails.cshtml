@@ -1,7 +1,7 @@
-﻿@model NewEventPlanner.Models.Business
+﻿@model NewEventPlanner.Models.SecurityAgency
 
 @{
-    ViewBag.Title = "DetailsOfSecurityAgency";
+    ViewBag.Title = "SecurityAgencyDetails";
 }
 
 <style>
@@ -14,13 +14,10 @@
         padding: 150px;
     }
 </style>
-
 <div>
-   
+    <h4>SecurityAgency</h4>
     <hr />
     <dl class="dl-horizontal">
-
-
         <dt>
             @Html.DisplayNameFor(model => model.SecurityAgencyName)
         </dt>
@@ -45,6 +42,7 @@
             @Html.DisplayFor(model => model.Charge)
         </dd>
 
+        
 
     </dl>
 </div>

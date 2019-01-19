@@ -1,4 +1,5 @@
-﻿using NewEventPlanner.Models;
+﻿using Microsoft.AspNet.Identity;
+using NewEventPlanner.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,7 +13,8 @@ namespace NewEventPlanner.Controllers
 {
     public class HomeController : Controller
     {
-        public ApplicationDbContext db = new ApplicationDbContext();
+        public ApplicationDbContext db;
+        public ApplicationUser user;
         public ActionResult Index()
         {
             return View();
@@ -37,6 +39,15 @@ namespace NewEventPlanner.Controllers
             ViewBag.StripePublishKey = stripePublishKey;
             return View();
         }
+
+        public ActionResult Charge(string stripeEmail, string stripeToken)
+        {
+            db = new ApplicationDbContext();
+            user = new ApplicationUser();
+            return View();
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Email(EmailFormModel model)

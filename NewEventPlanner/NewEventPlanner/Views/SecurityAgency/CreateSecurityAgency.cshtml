@@ -1,7 +1,7 @@
-﻿@model NewEventPlanner.Models.Business
+﻿@model NewEventPlanner.Models.SecurityAgency
 
 @{
-    ViewBag.Title = "Creating Security Agency";
+    ViewBag.Title = "CreateSecurityAgency";
 }
 
 <style>
@@ -14,15 +14,14 @@
         padding: 150px;
     }
 </style>
-@using (Html.BeginForm())
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
-        <h4>Business</h4>
+        <h4>SecurityAgency</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
         <div class="form-group">
             @Html.LabelFor(model => model.SecurityAgencyName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -46,6 +45,8 @@
                 @Html.ValidationMessageFor(model => model.Charge, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

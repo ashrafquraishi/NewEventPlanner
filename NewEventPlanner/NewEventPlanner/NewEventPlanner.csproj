@@ -206,6 +206,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\BusinessController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SecurityAgencyController.cs" />
     <Compile Include="Controllers\testController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -248,12 +249,17 @@
     <Compile Include="Migrations\201901172236026_added some changes .Designer.cs">
       <DependentUpon>201901172236026_added some changes .cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901182231538_updating models.cs" />
+    <Compile Include="Migrations\201901182231538_updating models.Designer.cs">
+      <DependentUpon>201901182231538_updating models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EmailFormModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Business.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SecurityAgency.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -341,11 +347,6 @@
     <Content Include="Views\Home\Stripe.cshtml" />
     <Content Include="Views\User\CreateUser.cshtml" />
     <Content Include="Views\User\Stripe.cshtml" />
-    <Content Include="Views\Business\CreateSecurityAgency.cshtml" />
-    <Content Include="Views\Business\DetailsOfSecurityAgency.cshtml" />
-    <Content Include="Views\User\DetailsOfSecurityAgency.cshtml" />
-    <Content Include="Views\Business\SecurityAgencyIndex.cshtml" />
-    <Content Include="Views\User\SecurityAgencyIndex.cshtml" />
     <Content Include="Views\User\Chat.cshtml" />
     <Content Include="Views\Home\Email.cshtml" />
     <Content Include="Views\Upload\UploadFile.cshtml" />
@@ -354,6 +355,12 @@
     <Content Include="Views\Email\Sent.cshtml" />
     <Content Include="Views\User\UserDetails.cshtml" />
     <Content Include="Views\test\Checkbox.cshtml" />
+    <Content Include="Views\SecurityAgency\SecurityAgencyIndex.cshtml" />
+    <Content Include="Views\SecurityAgency\CreateSecurityAgency.cshtml" />
+    <Content Include="Views\SecurityAgency\EditBusiness.cshtml" />
+    <Content Include="Views\SecurityAgency\SecurityAgencyDetails.cshtml" />
+    <Content Include="Views\SecurityAgency\Test.cshtml" />
+    <Content Include="Views\Home\Charge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -400,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901172236026_added some changes .resx">
       <DependentUpon>201901172236026_added some changes .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901182231538_updating models.resx">
+      <DependentUpon>201901182231538_updating models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

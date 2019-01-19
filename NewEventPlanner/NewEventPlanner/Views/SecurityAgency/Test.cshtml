@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+<style>
+    body {
+        background-position: center;
+        height: 750px;
+        background-image: url('../../Images/1.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        padding: 150px;
+    }
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center"> Pricing Tables for caterers</h2>
+    @*<p style="text-align:center">Resize the browser window to see the effect.</p>*@
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header">Basic</li>
+            <li class="grey">$ 10 / person</li>
+            <li>Creamy Tomato Soup  </li>
+            <li>Mix Vegetable Soup  </li>
+            <li>Chicken Soup</li>
+            <li>Tomato Soup </li>
+
+            <li class="grey"> @*<a href="#" class="button">Order Now</a></li>*@
+            <a href="/Home/Stripe">Order Now</a>
+        </ul>
+    </div>
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header" style="background-color:#4CAF50">Pro</li>
+            <li class="grey">$ 25 / person </li>
+            <li>Spicy Crab Rangoon</li>
+            <li>Spicy Noodles</li>
+            <li>Sushi</li>
+            <li>Shrimp Fried Rice</li>
+            <li class="grey"> <a href="/Home/Stripe">Order Now</a>
+</ul>
+    </div>
+
+    <div class="columns">
+        <ul class="price">
+            <li class="header">Premium</li>
+            <li class="grey">$ 35 / person </li>
+            <li>Chicken Tikka</li>
+            <li>Tandoori Mix Grill</li>
+            <li>Shrimp Tikka Masalas</li>
+            <li>Fried Rice</li>
+
+            <li class="grey"> <a href="/Home/Stripe">Order Now</a>
+</ul>
+    </div>
+
+</body>
+</html>
