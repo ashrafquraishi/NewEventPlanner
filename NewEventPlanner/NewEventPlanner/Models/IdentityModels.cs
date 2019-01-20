@@ -32,5 +32,8 @@ namespace NewEventPlanner.Models
         public DbSet<SecurityAgency> SecurityAgency { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Business> Business { get; set; }
+      
+       
+
     }
 }

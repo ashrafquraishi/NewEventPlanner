@@ -22,7 +22,7 @@ namespace NewEventPlanner.Controllers
             return View();
         }
         [HttpPost]
-        
+
         // GET: User/Details/5
 
         public ActionResult UserDetails(int? id)
@@ -118,10 +118,10 @@ namespace NewEventPlanner.Controllers
                 return View();
             }
         }
-            public ActionResult SearchZipcode()
-            {
-                return View(db.Business.ToList());
-            }
+        public ActionResult SearchZipcode()
+        {
+            return View(db.Business.ToList());
+        }
 
         [HttpPost]
         public ActionResult SearchZipcode(string SearchResult)
@@ -161,7 +161,7 @@ namespace NewEventPlanner.Controllers
             }
             return View(business);
         }
-       
+
 
 
         public ActionResult CaterersIndex()
@@ -255,9 +255,6 @@ namespace NewEventPlanner.Controllers
 
             return View(user);
         }
-
-
-
 
     }
 

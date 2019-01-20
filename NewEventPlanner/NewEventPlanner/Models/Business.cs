@@ -24,8 +24,11 @@ namespace NewEventPlanner.Models
         public string Phone { get; set; }
         public int Capacity { get; set; }
         public double Price { get; set; }
-       
-       
+        [Display(Name = "Booking Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime? BookingDate { get; set; }
+
         [Display(Name = "Picture Upload: ")]
         public string PictureUpload { get; set; }
         public string ApplicationUserId { get; internal set; }

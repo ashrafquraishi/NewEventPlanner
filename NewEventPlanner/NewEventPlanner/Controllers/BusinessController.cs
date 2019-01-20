@@ -54,7 +54,7 @@ namespace NewEventPlanner.Controllers
 
         // POST: Main/Create
         [HttpPost]
-        public ActionResult CreateBusiness([Bind(Include = " Id,VenueName,Address,City,State,ZipCode,Phone,Capacity,Price")] Business business)
+        public ActionResult CreateBusiness([Bind(Include = " Id,VenueName,Address,City,State,ZipCode,Phone,Capacity,Price,")] Business business)
         {
             if (ModelState.IsValid)
             {
@@ -132,7 +132,7 @@ namespace NewEventPlanner.Controllers
             }
         }
       
-        
+
 
     }
 }
