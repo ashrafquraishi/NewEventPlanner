@@ -403,6 +403,7 @@
     <Content Include="Views\SecurityAgency\SecurityAgency.cshtml" />
     <Content Include="Views\SecurityAgency\StripeForSecurityAgency.cshtml" />
     <Content Include="Views\Home\Event.cshtml" />
+    <Content Include="Views\User\StripeForVenueOwners.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

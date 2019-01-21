@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "StripeForVenueOwners";
+}
+
+<style>
+    body {
+        background-position: center;
+        height: 750px;
+        background-image: url('../../Images/1.jpg');
+        background-position: center;
+        background-repeat: no-repeat, repeat;
+        padding: 150px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form action="/action_page.php">
+
+                <div class="row">
+                    <div class="col-50">
+
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label><br />
+                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe"><br />
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label><br />
+                        <input type="text" id="email" name="email" placeholder="john@example.com"><br />
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label><br />
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"><br />
+                        <label for="city"><i class="fa fa-institution"></i> City</label><br />
+                        <input type="text" id="city" name="city" placeholder="Milwaukeek"><br />
+
+                        <label for="state"><i class="fa fa-institution"></i> State</label><br />
+                        <input type="text" id="state" name="city" placeholder="Wisconsin"><br />
+
+                        <label for="zipcode"><i class="fa fa-institution"></i> Zipcode</label><br />
+                        <input type="text" id="Zipcode" name="city" placeholder="53220"><br />
+
+                       
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <br />
+        <form name="BillingForm" action="/Home/Charge" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+                    data-amount="@ViewBag.Fee"
+                    data-name="Stripe.com"
+                    data-description="charge"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto"
+                    data-zip-code="false">
+            </script>
+        </form>
+    </div>
+</div>
+  

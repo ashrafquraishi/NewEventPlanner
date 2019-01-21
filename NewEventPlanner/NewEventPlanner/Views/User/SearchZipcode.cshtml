@@ -17,7 +17,7 @@
 <h2>Search By Zip code</h2>
 
 <p>
-    @*@Html.ActionLink("Create New", "Create")*@
+   
 
     @using (Html.BeginForm())
     {
@@ -88,8 +88,8 @@
 
                 <td>
                     @Html.ActionLink("Details", "BusinessDetails", new { id = item.Id }) |
-                    @Html.ActionLink("Book this venue", "Stripe", "Home", new { id = item.Id }) |
-                  
+                    
+                    <a href="/Home/Event">Check Availibiity</a>
                 </td>
             </tr>
         }

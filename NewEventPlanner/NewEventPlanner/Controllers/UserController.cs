@@ -21,7 +21,7 @@ namespace NewEventPlanner.Controllers
         {
             return View();
         }
-        [HttpPost]
+        
 
         // GET: User/Details/5
 
@@ -50,6 +50,9 @@ namespace NewEventPlanner.Controllers
             }
             return View(user);
         }
+
+
+
         // GET: User/Create
         public ActionResult CreateUser()
         {
@@ -196,7 +199,7 @@ namespace NewEventPlanner.Controllers
             return View(business);
         }
 
-        public ActionResult Stripe()
+        public ActionResult StripeForVenueOwners()
         {
             var stripePublishKey = ConfigurationManager.AppSettings["stripePublishableKey"];
             ViewBag.StripePublishKey = stripePublishKey;
